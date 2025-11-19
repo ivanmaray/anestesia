@@ -104,7 +104,7 @@ function App() {
                   <div className="lg:col-span-2">
                     <div className="card">
                       <h3 className="text-lg font-semibold mb-4">Panel de control</h3>
-                      <Dashboard />
+                      <Dashboard onNavigate={(s: string) => setSection(s)} />
                     </div>
                   </div>
                   <div>
