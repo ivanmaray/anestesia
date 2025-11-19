@@ -1,4 +1,3 @@
-import React from 'react'
 import { render, screen, within } from '@testing-library/react'
 import PredictiveRiskPanel from '../PredictiveRiskPanel'
 import { modelMetadata } from '../../lib/iaPredictive'

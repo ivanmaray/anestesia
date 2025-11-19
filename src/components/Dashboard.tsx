@@ -4,7 +4,7 @@ import { Bar, Line } from 'react-chartjs-2';
 const barOptions = {
   responsive: true,
   plugins: { legend: { display: false }, title: { display: false } },
-  scales: { x: { type: 'category' }, y: { beginAtZero: true } },
+  scales: { x: { type: 'category' as const }, y: { beginAtZero: true } },
 }
 
 const lineOptions = {

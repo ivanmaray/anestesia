@@ -69,7 +69,7 @@ const generateRiskScore = (record: PatientRecord): RiskScore => {
       hemoglobin,
       platelets,
       prev,
-      multiresistant: record.multiresistant ?? false
+      multiresistant: record.multiresistant ? 1 : 0
     }
   }
 };
