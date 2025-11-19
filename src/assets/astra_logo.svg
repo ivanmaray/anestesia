@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" role="img" aria-label="Astra logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#64B5F6" />
+      <stop offset="100%" stop-color="#1E88E5" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="60" rx="8" fill="transparent" />
+  <g transform="translate(8,6)">
+    <!-- orbital emblem -->
+    <circle cx="24" cy="24" r="16" fill="url(#g)" />
+    <path d="M6 40 C 20 28, 44 28, 58 16" stroke="#FF3B30" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- wordmark -->
+    <text x="64" y="30" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="18" fill="#ffffff">ASTRA</text>
+  </g>
+</svg>
