@@ -14,7 +14,7 @@ export default function PredictiveRiskPanel({ records = [] }: PredictiveRiskPane
     if (records && records.length) { setLocalRecords(records); return }
     try {
       const s = JSON.parse(localStorage.getItem('preanesthesia_records') || '[]') || []
-      const parsed = s.map((r: any, i: number) => {
+      const parsed = s.map((r: any) => {
         const meds = (r.medicacion_actual && typeof r.medicacion_actual === 'string') ? r.medicacion_actual.split(',').map((m: string, j: number) => ({ id: `m-${j}`, name: m.trim() })) : []
         let eGFR: number | undefined = undefined
         if (r.creatinina_mg_dL !== undefined) {

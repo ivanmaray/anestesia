@@ -50,28 +50,28 @@ export default function Retrospective() {
     }
   }, [monthly, alerts, computeKPIs, stackedByType])
 
-  function getMotiveDescription(label: string) {
-    const map: { [k: string]: string } = {
-      'Prescripción manual': 'Prescripciones sin doble verificación o transcripción manual que inducen errores.',
-      'Confusión parecido nombre': 'Errores por similitud de nombre entre fármacos o pacientes (confusión de identidad).',
-      'Error humano': 'Errores por fallos humanos: interrupciones, fatiga o procesos no estandarizados.',
-      'Errores de etiquetado': 'Etiquetado incorrecto de medicamentos/pacientes que puede conducir a administración equivocada.'
-    }
-    // look for startsWith key
-    const key = Object.keys(map).find((k) => label.startsWith(k))
-    return key ? map[key] : 'Hallazgo identificado en entrevistas (resumen cualitativo)'
-  }
+  // function getMotiveDescription(label: string) {
+  //   const map: { [k: string]: string } = {
+  //     'Prescripción manual': 'Prescripciones sin doble verificación o transcripción manual que inducen errores.',
+  //     'Confusión parecido nombre': 'Errores por similitud de nombre entre fármacos o pacientes (confusión de identidad).',
+  //     'Error humano': 'Errores por fallos humanos: interrupciones, fatiga o procesos no estandarizados.',
+  //     'Errores de etiquetado': 'Etiquetado incorrecto de medicamentos/pacientes que puede conducir a administración equivocada.'
+  //   }
+  //   // look for startsWith key
+  //   const key = Object.keys(map).find((k) => label.startsWith(k))
+  //   return key ? map[key] : 'Hallazgo identificado en entrevistas (resumen cualitativo)'
+  // }
 
-  function getMotiveOpportunity(label: string) {
-    const map: { [k: string]: string } = {
-      'Prescripción manual': 'Oportunidad: implementar verificación electrónica y doble check en dosis críticas.',
-      'Confusión parecido nombre': 'Oportunidad: revisar listas LASA, usar tallos de colores y estandarizar nombres de farmacos.',
-      'Error humano': 'Oportunidad: mejorar controles de carga cognitiva y checklists en quirófano.',
-      'Errores de etiquetado': 'Oportunidad: aplicar etiquetado estandarizado con códigos de barra y verificación cruzada.'
-    }
-    const key = Object.keys(map).find((k) => label.startsWith(k))
-    return key ? map[key] : 'Oportunidad: Revisar proceso operativo y aplicar controles adicionales.'
-  }
+  // function getMotiveOpportunity(label: string) {
+  //   const map: { [k: string]: string } = {
+  //     'Prescripción manual': 'Oportunidad: implementar verificación electrónica y doble check en dosis críticas.',
+  //     'Confusión parecido nombre': 'Oportunidad: revisar listas LASA, usar tallos de colores y estandarizar nombres de farmacos.',
+  //     'Error humano': 'Oportunidad: mejorar controles de carga cognitiva y checklists en quirófano.',
+  //     'Errores de etiquetado': 'Oportunidad: aplicar etiquetado estandarizado con códigos de barra y verificación cruzada.'
+  //   }
+  //   const key = Object.keys(map).find((k) => label.startsWith(k))
+  //   return key ? map[key] : 'Oportunidad: Revisar proceso operativo y aplicar controles adicionales.'
+  // }
 
 
   // Simplified: interviews and indicators are presented as static examples (no edit/persist)

@@ -60,7 +60,7 @@ export default function InterventionsPanel() {
         </div>
 
         {/* Checklist integration for Nivel 1 interventions */}
-        {intervention.level === '1' && (
+        {intervention.level === 1 && (
           <div className="mt-4">
             <button
               onClick={() => setShowChecklist(!showChecklist)}
