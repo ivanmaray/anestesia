@@ -40,10 +40,22 @@ function App() {
                 <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-3">Proyecto Farmacia–Anestesia</h1>
                 <p className="text-sm md:text-base text-white/90 mb-4">Mejorar la seguridad en anestesia mediante colaboración Farmacia–Anestesia, soporte de decisiones clínicas, farmacogenómica y modelos predictivos con IA.</p>
                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                  <button onClick={() => setView('proyecto')} className="px-5 py-2 rounded-md bg-white text-indigo-700 font-semibold shadow hover:translate-y-[-1px]">
+                  <button 
+                    onClick={() => {
+                      console.log('Navegando a proyecto...')
+                      setView('proyecto')
+                    }} 
+                    className="px-5 py-2 rounded-md bg-white text-indigo-700 font-semibold shadow hover:translate-y-[-1px] transition-all hover:shadow-lg active:scale-95"
+                  >
                     Ver Proyecto
                   </button>
-                  <button onClick={() => setView('prototipo')} className="px-5 py-2 rounded-md bg-white/20 border border-white/30 text-white hover:bg-white/30">
+                  <button 
+                    onClick={() => {
+                      console.log('Navegando a prototipo...')
+                      setView('prototipo')
+                    }} 
+                    className="px-5 py-2 rounded-md bg-white/20 border border-white/30 text-white hover:bg-white/30 transition-all hover:shadow-lg active:scale-95"
+                  >
                     Ver Prototipo del Proyecto
                   </button>
                 </div>
@@ -104,7 +116,7 @@ function App() {
                   <div className="lg:col-span-2">
                     <div className="card">
                       <h3 className="text-lg font-semibold mb-4">Panel de control</h3>
-                      <Dashboard />
+                      <Dashboard onNavigate={(s) => setSection(s)} />
                     </div>
                   </div>
                   <div>
