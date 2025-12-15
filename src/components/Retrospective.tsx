@@ -203,7 +203,7 @@ export default function Retrospective() {
               <div className="bg-white/4 rounded p-3">
                 <div className="text-xs text-slate-400 mb-2">Tasa de Eventos Severos (por 1000)</div>
                 <div className="text-2xl font-bold text-orange-400">{Math.round(kpis.severosPor1000 * 100) / 100}</div>
-                <div className="text-xs text-slate-400 mt-1">Objetivo: < 0.5</div>
+                <div className="text-xs text-slate-400 mt-1">Objetivo: &lt; 0.5</div>
               </div>
               <div className="bg-white/4 rounded p-3">
                 <div className="text-xs text-slate-400 mb-2">Near-Miss Rate (por 1000)</div>
