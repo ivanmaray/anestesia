@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react'
 import useDashboardData from '../hooks/useDashboardData'
 
 export default function Retrospective() {
-  const { monthly, alerts, computeKPIs } = useDashboardData()
+  const { computeKPIs } = useDashboardData()
   const [expandedPhase, setExpandedPhase] = useState<string | null>('fase1')
 
   // Datos clínicos mejorados de errores de medicación anestésica
@@ -40,32 +40,6 @@ export default function Retrospective() {
   }, [])
 
   const kpis = useMemo(() => computeKPIs({ period: 12, area: 'Todas' }), [computeKPIs])
-
-  // Simplified: interviews and indicators are presented as static examples (no edit/persist)
-
-  // Default interview findings to present in structured interviews UI
-  const interviewFindingsDefault = [
-    {
-      label: 'Error humano',
-      description: 'Errores por fallos humanos: interrupciones, fatiga o procesos no estandarizados.',
-      count: 48,
-      opportunity: 'Oportunidad: mejorar controles de carga cognitiva y checklists en quirófano.'
-    },
-    {
-      label: 'Prescripción manual',
-      description: 'Prescripciones sin doble verificación o transcripción manual que inducen errores.',
-      count: 43,
-      opportunity: 'Oportunidad: implementar verificación electrónica y doble check en dosis críticas.'
-    },
-    {
-      label: 'Confusión parecido nombre',
-      description: 'Errores por similitud de nombre entre fármacos o pacientes (confusión de identidad).',
-      count: 40,
-      opportunity: 'Oportunidad: revisar listas LASA, usar tallos de colores y estandarizar nombres de farmacos.'
-    }
-  ]
-
-  const maxInterviewCount = Math.max(...interviewFindingsDefault.map((m: any) => m.count), 1)
 
   return (
     <div className="space-y-4">
@@ -251,4 +225,6 @@ export default function Retrospective() {
           </div>
         )}
       </div>
-}
+    </div> /* Close the top-level <div> */
+  ); /* Close the return statement */
+} /* Close the component */
